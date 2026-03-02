@@ -1,0 +1,443 @@
+/* style.css - ICS Banaue, Ifugao Theme */
+
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf2 100%);
+    color: #2c3e50;
+}
+
+/* Header Styles - Inspired by Rice Terraces Colors */
+header {
+    background: linear-gradient(135deg, #1a472a, #2d5a27, #8B5A2B);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "⛰️";
+    font-size: 8rem;
+    opacity: 0.1;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    transform: rotate(-10deg);
+}
+
+header::after {
+    content: "🌾";
+    font-size: 8rem;
+    opacity: 0.1;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transform: rotate(10deg);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-style: italic;
+    opacity: 0.95;
+    position: relative;
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+}
+
+/* Navigation Styles - Terraced Design */
+.main-nav {
+    background: linear-gradient(90deg, #2d5a27, #1a472a);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,40,0,0.3);
+    border-bottom: 3px solid #8B5A2B;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    background-color: #8B5A2B;
+    border-color: #FFD700;
+    transform: translateY(-2px);
+}
+
+/* Main Content Area */
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 5rem;
+    scroll-margin-top: 90px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a472a;
+    font-size: 2.8rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '🌾';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    background: transparent;
+    width: auto;
+    height: auto;
+}
+
+/* About Section - Banaue Theme */
+.about-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7e6 100%);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(26, 71, 42, 0.15);
+    border: 1px solid #8B5A2B20;
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #8B5A2B;
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0.8rem;
+    border-left: 5px solid #1a472a;
+    padding-left: 1rem;
+}
+
+.about-text h3:first-of-type {
+    margin-top: 0;
+}
+
+.about-text p {
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    line-height: 1.9;
+    font-size: 1.1rem;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border: 5px solid #8B5A2B;
+    transition: transform 0.3s;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Gallery Section - Rice Terrace Grid */
+.gallery {
+    background: linear-gradient(135deg, #ffffff 0%, #fff9f0 100%);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(139, 90, 43, 0.1);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Photo Card Styles - Terraced Effect */
+.photo-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(26, 71, 42, 0.15);
+    transition: all 0.4s;
+    border: 1px solid #8B5A2B30;
+    position: relative;
+}
+
+.photo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1a472a, #8B5A2B, #1a472a);
+    z-index: 1;
+}
+
+.photo-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 30px rgba(26, 71, 42, 0.25);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.1);
+}
+
+.photo-card .caption {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #fff, #f8f4e8);
+    border-top: 2px solid #8B5A2B;
+    font-weight: 500;
+}
+.group-members {
+    background: linear-gradient(135deg, #d68767 0%, #2d5a27 100%);
+    border-radius: 30px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.group-members::before {
+    content: "⛰️🌾⛰️🌾";
+    font-size: 8rem;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    width: 100%;
+}
+
+.group-members h2 {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.members-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.group-members h2::after {
+    content: '✨';
+    color: #FFD700;
+}
+
+.team-intro {
+    font-size: 1.3rem;
+    color: #FFD700;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    border: 2px solid #FFD700;
+    backdrop-filter: blur(5px);
+}
+.members-list li {
+    background-color: #2a5298;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+.member-card:hover {
+    transform: scale(1.05);
+    background: white;
+    border-color: #8B5A2B;
+}
+
+.member-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+    color: #1a472a;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.team-motto {
+    color: #FFD700;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 2px solid #FFD70050;
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #1a2f1a, #1a472a);
+    color: #fff;
+    margin-top: 3rem;
+    border-top: 5px solid #8B5A2B;
+}
+
+.footer-note {
+    margin: 1rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+.footer-address {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .main-nav a {
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ifugao Pattern Background */
+.photo-card::after {
+    content: "⚙️";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.1;
+    font-size: 2rem;
+}
+
+/* Honor the Ifugao Heritage */
+footer::before {
+    content: "🪶";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
